@@ -1,0 +1,11 @@
+streamlit==1.32.0
+requests==2.31.0
+beautifulsoup4==4.12.3
+trafilatura==1.8.0
+langchain==0.1.12
+langchain-community==0.0.28
+sentence-transformers==2.5.1
+chromadb==0.4.24
+openai==1.14.0
+python-dotenv==1.0.1
+tiktoken==0.6.0
