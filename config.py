@@ -4,11 +4,16 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def get_secret(key, default=None):
-    try:
-        import streamlit as st
-        return st.secrets.get(key, os.getenv(key, default))
-    except:
-        return os.getenv(key, default)
+    import sys
+    value = os.getenv(key, default)
+    if 'streamlit' in sys.modules:
+        try:
+            import streamlit as st
+            if hasattr(st, 'secrets') and key in st.secrets:
+                value = st.secrets[key]
+        except:
+            pass
+    return value
 
 class Config:
     
