@@ -1,29 +1,30 @@
 # Core Framework
-streamlit==1.28.0   # Pinned for stability with Tornado 6.1
-tornado==6.1        # Required by Streamlit 1.28.0 to avoid WebSocket errors
+streamlit==1.28.0
+tornado==6.1
 
 # Web Crawling & Parsing
-requests==2.31.0
-beautifulsoup4==4.12.3
-trafilatura==1.8.0
-lxml_html_clean     # Required by trafilatura/justext
+requests>=2.31.0
+beautifulsoup4>=4.12.3
+trafilatura>=1.8.0
+lxml_html_clean
 
 # LLM & AI Framework (RAG Pipeline)
-langchain==0.2.0
-langchain-community==0.2.0
-langchain-core==0.2.43
-langchain-text-splitters==0.2.4
-langchain-groq==0.1.10
-groq==0.37.1
+# Relaxed pins to allow resolution of compatible versions, targeting 0.3.x ecosystem if needed
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-core>=0.2.0
+langchain-text_splitters>=0.2.0
+langchain-groq>=0.1.0
+groq>=0.5.0
 
 # Embeddings & Vector Store
-sentence-transformers==2.5.1
-chromadb==0.4.24
+sentence-transformers>=2.5.1
+chromadb>=0.4.24
 pinecone-client
 langchain-pinecone
 
 # Utilities
-python-dotenv==1.0.1
-tiktoken==0.6.0
-protobuf==3.20.3
-numpy<2.0.0         # Pinned less than 2.0 to avoid binary incompatibility
+python-dotenv
+tiktoken
+protobuf
+numpy<2.0.0
