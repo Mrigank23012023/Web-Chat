@@ -1,9 +1,16 @@
 import streamlit as st
 import time
 import logging
-from frontend.ui import UI
-from backend.auth import Auth
-from config import Config
+import traceback
+
+try:
+    from frontend.ui import UI
+    from backend.auth import Auth
+    from config import Config
+except Exception as e:
+    st.error(f"Failed to import required modules: {e}")
+    st.code(traceback.format_exc())
+    st.stop()
 
 logging.basicConfig(
     level=logging.INFO,
