@@ -1,0 +1,141 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-orange: #ff1e00;
+    --bg-dim-blue: #e8f9fd;
+    --highlight-green: #59ce8f;
+    --text-dark: #1e293b;
+    --text-gray: #64748b;
+    --white: #ffffff;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+html, body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+}
+
+/* App Background */
+.stApp {
+    background-color: var(--bg-dim-blue);
+    background-image: linear-gradient(135deg, #e8f9fd 0%, #f0fcff 100%);
+}
+
+/* Sidebar Styling */
+div[data-testid="stSidebar"] {
+    background-color: var(--white);
+    border-right: 1px solid rgba(0,0,0,0.05);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Headlines */
+h1, h2, h3 {
+    font-weight: 700 !important;
+    color: var(--text-dark) !important;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    color: var(--primary-orange) !important;
+}
+
+/* Inputs */
+.stTextInput input {
+    color: var(--text-dark) !important;
+    background-color: var(--white) !important;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s;
+}
+
+.stTextInput input:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 2px rgba(255, 30, 0, 0.2);
+}
+
+/* Primary Button */
+button[kind="primary"] {
+    background-color: var(--primary-orange) !important;
+    color: var(--white) !important;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow);
+}
+
+button[kind="primary"]:hover {
+    background-color: #d91900 !important; /* Slightly darker orange */
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Secondary Button */
+button[kind="secondary"] {
+    background-color: var(--white);
+    color: var(--text-dark);
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+button[kind="secondary"]:hover {
+    border-color: var(--primary-orange);
+    color: var(--primary-orange);
+}
+
+/* Chat Messages */
+.stChatMessage {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+}
+
+div[data-testid="stChatMessageContent"] {
+    color: var(--text-dark);
+}
+
+/* User Message Avatar Background */
+.stChatMessage[data-testid="chatAvatarUser"] {
+    background-color: var(--bg-dim-blue);
+}
+
+/* Alerts / Success */
+.stAlert {
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Success Green Override */
+div[data-baseweb="notification"] {
+    background-color: var(--highlight-green);
+    color: var(--white);
+}
+
+/* Spinners */
+.stSpinner > div {
+    border-top-color: var(--primary-orange) !important;
+}
+
+/* Dividing Lines */
+hr {
+    border-color: rgba(0,0,0,0.1);
+}
+
+/* Links */
+a {
+    color: var(--primary-orange) !important;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
