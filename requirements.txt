@@ -1,5 +1,6 @@
 # Core Framework
 streamlit>=1.39.0
+
 # Web Crawling & Parsing
 requests>=2.31.0
 beautifulsoup4>=4.12.3
@@ -15,14 +16,14 @@ langchain-groq>=0.1.0
 groq>=0.5.0
 
 # Embeddings & Vector Store
+sentence-transformers>=2.5.1
+chromadb>=0.4.24
 pinecone-client
 langchain-pinecone
+pysqlite3-binary
 
 # Utilities
 python-dotenv
 tiktoken
 protobuf
-
-
-
-
+numpy<2.0.0
